@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pg.js">
+    <title>Document</title>
+</head>
+<body>
+    <form id="addbook">
+    <label>Title :</label>
+    <input type="text" name="title">
+    <br>
+    <label>Author :</label>
+    <input type="text" name="author">
+    <br>
+    <label>Description :</label>
+    <input type="text" name="description">
+    <br>
+    <label>Pages:</label>
+    <input type="number" name="pages">
+    <br>
+    <input type="submit" value="Ajouter">
+  </form>
+    <script>
+        import book from "./pg.js"
+        const book1 = new Book("title of the first book ", "author of the first book ", "Description of the first book");
+        const book2 = new Book("title of the second book", "author of the second book", "Description of the second book");
+        const book3 = new Book("title of the third book", "author of the third book", "Description of the third book");
+        const books = [book1, book2, book3];
+
+console.log(books[0]); // il affiche le 1er livre
+
+books[0].readBook(); // En cours de lecture
+books[0].readBook(); // Lu
+    </script>
+</body>
+</html>
